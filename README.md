@@ -40,7 +40,7 @@ SDK 的公共入口是 `IslandClient`，同时兼容 Java、Kotlin 和 Jetpack C
 
 #### 通过 JitPack
 
-将仓库公开到 GitHub，并创建版本 Tag，例如 `v1.0.0`。首次发布时在 [JitPack](https://jitpack.io/) 中构建 `HuberHaYu/Xiaomi-SuperIsland-Playground` 的对应 Tag；开发者不需要生成或寻找依赖坐标，直接使用下面这段固定配置：
+各位开发者可直接参考并使用如下的配置文件模板进行依赖安装：
 
 ```kotlin
 repositories {
@@ -50,17 +50,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.HuberHaYu.Xiaomi-SuperIsland-Playground:island-super-island:v1.0.0")
-}
-```
-
-升级 SDK 时，将版本号统一替换为新的 Git Tag，例如 `v1.1.0`。仓库配置如下：
-
-```kotlin
-repositories {
-    google()
-    mavenCentral()
-    maven { url = uri("https://jitpack.io") }
+    implementation("com.github.HuberHaYu:Xiaomi-SuperIsland-Playground:v1")
 }
 ```
 
@@ -192,7 +182,7 @@ The public entry point is `IslandClient`. The SDK is usable from Java, Kotlin, a
 
 #### JitPack
 
-Make the repository public on GitHub and create a version tag such as `v1.0.0`. On the first release, build the corresponding `HuberHaYu/Xiaomi-SuperIsland-Playground` tag on [JitPack](https://jitpack.io/). Consumers do not need to generate or search for a dependency coordinate; they can use this fixed configuration directly:
+Consumers do not need to generate or search for a dependency coordinate; they can use this fixed configuration directly:
 
 ```kotlin
 repositories {
@@ -202,17 +192,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.HuberHaYu.Xiaomi-SuperIsland-Playground:island-super-island:v1.0.0")
-}
-```
-
-For a later SDK release, replace the version with the new Git tag, for example `v1.1.0`. The repository configuration is:
-
-```kotlin
-repositories {
-    google()
-    mavenCentral()
-    maven { url = uri("https://jitpack.io") }
+    implementation("com.github.HuberHaYu:Xiaomi-SuperIsland-Playground:v1")
 }
 ```
 
