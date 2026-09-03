@@ -21,7 +21,7 @@ design/               App 图标设计源文件
 - Android Studio（建议使用最新版稳定版）
 - JDK 11 或更高版本
 - Android API 31 或更高版本
-- 小米 HyperOS 设备可使用完整的 Super Island 能力；其他 Android 设备会自动回退为普通通知
+- 小米 HyperOS 设备可使用完整的 Super Island 能力；其他 Android 设备会自动回退为普通通知，或 Live Update 通知
 
 ### 构建示例应用
 
@@ -32,11 +32,11 @@ design/               App 图标设计源文件
 ./gradlew :app:assembleRelease
 ```
 
-Release 构建已启用 R8 压缩、优化、资源压缩和混淆。XMSF 发布器、能力检测、媒体接收器以及 HiddenApiBypass 相关类已加入 keep 规则，避免混淆导致 Super Island 失效。
+请务必配合 HiddenApiBypass 依赖，并在构建时加入 keep 规则（具体 keep 可见开源包），避免混淆导致 Super Island 失效。
 
 ### 集成 SDK
 
-SDK 的公共入口是 `IslandClient`，同时兼容 Java、Kotlin 和 Jetpack Compose。SDK 最低支持 Android API 31；库的 manifest 已声明网络权限、通知权限并注册媒体控制接收器。Android 13 及以上仍需由宿主应用在运行时申请 `POST_NOTIFICATIONS`。
+SDK 的公共入口是 `IslandClient`，同时兼容 Java、Kotlin 和 Jetpack Compose；库的 manifest 已声明网络权限、通知权限并注册媒体控制接收器。使用时务必申请 `POST_NOTIFICATIONS` 权限。
 
 #### 通过 JitPack
 
