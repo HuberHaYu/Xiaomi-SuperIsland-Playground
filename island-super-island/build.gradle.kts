@@ -3,7 +3,7 @@ plugins {
     `maven-publish`
 }
 
-group = "com.github.huberhayu"
+group = "com.github.HuberHaYu.Xiaomi-SuperIsland-Playground"
 version = "1.0.0"
 
 android {
@@ -47,7 +47,7 @@ publishing {
             pom {
                 name.set("Island Super Island SDK")
                 description.set("Android library for publishing Xiaomi HyperOS Super Island notifications")
-                url.set("https://github.com/Huber-HaYu/Island")
+                url.set("https://github.com/HuberHaYu/Xiaomi-SuperIsland-Playground")
                 licenses {
                     license {
                         name.set("Apache License, Version 2.0")
@@ -55,9 +55,9 @@ publishing {
                     }
                 }
                 scm {
-                    url.set("https://github.com/Huber-HaYu/Island")
-                    connection.set("scm:git:https://github.com/Huber-HaYu/Island.git")
-                    developerConnection.set("scm:git:ssh://git@github.com/Huber-HaYu/Island.git")
+                    url.set("https://github.com/HuberHaYu/Xiaomi-SuperIsland-Playground")
+                    connection.set("scm:git:https://github.com/HuberHaYu/Xiaomi-SuperIsland-Playground.git")
+                    developerConnection.set("scm:git:ssh://git@github.com/HuberHaYu/Xiaomi-SuperIsland-Playground.git")
                 }
             }
         }
