@@ -121,25 +121,6 @@ fun IslandStatus() {
 
 生成的本地仓库位于 `island-super-island/build/repo`，AAR 位于 `island-super-island/build/outputs/aar/island-super-island-release.aar`。
 
-### GitHub 发布建议
-
-代码应放在 GitHub Repository 中；GitHub Project 只用于管理 Issue、任务和开发进度，不能替代代码仓库。建议创建 `v1.0.0` Tag，并在 GitHub Release 中附上构建好的 AAR 文件。后续升级时使用新的 Tag，例如 `v1.1.0`。
-
-建议的仓库结构：
-
-```text
-Island/
-├── app/
-├── island-super-island/
-├── design/
-├── gradle/
-├── build.gradle.kts
-├── settings.gradle.kts
-├── gradlew
-├── README.md
-└── LICENSE
-```
-
 ### 许可证
 
 本项目采用 Apache License 2.0，详见 [LICENSE](LICENSE)。
@@ -256,10 +237,6 @@ Use `updateActive(...)` for live changes, `cancel(notificationId)` to remove the
 ```
 
 The local repository is generated at `island-super-island/build/repo`; the AAR is generated at `island-super-island/build/outputs/aar/island-super-island-release.aar`.
-
-### GitHub release workflow
-
-The source code must live in a GitHub Repository. A GitHub Project is only for organizing issues, tasks, and development progress; it cannot replace the repository. Create a `v1.0.0` tag and attach the built AAR to the GitHub Release. Use a new tag such as `v1.1.0` for later SDK releases.
 
 ### License
 
