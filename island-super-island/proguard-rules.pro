@@ -1,0 +1,4 @@
+-keep class com.lab.island.sdk.island.XiaomiSuperIslandPublisher { *; }
+-keep class com.lab.island.sdk.island.XiaomiAurogonNetworkGate { *; }
+-keep class com.lab.island.sdk.island.MediaControlReceiver { *; }
+-keep class org.lsposed.hiddenapibypass.** { *; }

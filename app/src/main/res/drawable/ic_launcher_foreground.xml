@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!--
+        ICON TUNING GUIDE
+
+        outer_mark.rotation / translateX / translateY / scaleX / scaleY
+            Adjusts the rotation, position, and size of the complete composition.
+
+        *_island.translateY
+            Separation along the visible top-left to bottom-right diagonal.
+            Use a more negative value for the upper island and a more positive value
+            for the lower island to increase layer separation.
+
+        *_island.translateX
+            Moves an entire island perpendicular to that diagonal.
+
+        *_island.scaleX / scaleY
+            Scales the complete island around the 54,54 icon centre.
+
+        *_pill.scaleX / scaleY
+            Adjusts pill width and height independently.
+
+        *_dot.scaleX / scaleY
+            Adjusts dot size independently. Keep both values equal for a circle.
+
+        *_dot.translateX
+            Adjusts the pill-to-dot gap. Increase it on the upper/lower islands;
+            decrease it on the mirrored middle island to enlarge the gap.
+    -->
+    <group
+        android:name="outer_mark"
+        android:pivotX="54"
+        android:pivotY="54"
+        android:rotation="-45"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:translateX="0"
+        android:translateY="0">
+
+        <!-- UPPER ISLAND PARAMETERS -->
+        <group
+            android:name="upper_island"
+            android:pivotX="54"
+            android:pivotY="54"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:translateX="0"
+            android:translateY="-22">
+            <group
+                android:name="upper_pill"
+                android:pivotX="46.5"
+                android:pivotY="54"
+                android:scaleX="1"
+                android:scaleY="1">
+                <path
+                    android:fillColor="#FFFFFFFF"
+                    android:pathData="M42,49H51C53.76,49 56,51.24 56,54C56,56.76 53.76,59 51,59H42C39.24,59 37,56.76 37,54C37,51.24 39.24,49 42,49Z" />
+            </group>
+            <group
+                android:name="upper_dot"
+                android:pivotX="65"
+                android:pivotY="54"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:translateX="0">
+                <path
+                    android:fillColor="#FFFFFFFF"
+                    android:pathData="M70,54A5,5 0,1 1,60 54A5,5 0,1 1,70 54Z" />
+            </group>
+        </group>
+
+        <!-- MIDDLE ISLAND PARAMETERS: mirrored, dot on the left. -->
+        <group
+            android:name="middle_island"
+            android:pivotX="54"
+            android:pivotY="54"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:translateX="0"
+            android:translateY="0">
+            <group
+                android:name="middle_dot"
+                android:pivotX="35"
+                android:pivotY="54"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:translateX="0">
+                <path
+                    android:fillColor="#FFFFFFFF"
+                    android:pathData="M42,54A7,7 0,1 1,28 54A7,7 0,1 1,42 54Z" />
+            </group>
+            <group
+                android:name="middle_pill"
+                android:pivotX="63"
+                android:pivotY="54"
+                android:scaleX="1"
+                android:scaleY="1">
+                <path
+                    android:fillColor="#FFFFFFFF"
+                    android:pathData="M53,47H73C76.87,47 80,50.13 80,54C80,57.87 76.87,61 73,61H53C49.13,61 46,57.87 46,54C46,50.13 49.13,47 53,47Z" />
+            </group>
+        </group>
+
+        <!-- LOWER ISLAND PARAMETERS -->
+        <group
+            android:name="lower_island"
+            android:pivotX="54"
+            android:pivotY="54"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:translateX="0"
+            android:translateY="22">
+            <group
+                android:name="lower_pill"
+                android:pivotX="48"
+                android:pivotY="54"
+                android:scaleX="1"
+                android:scaleY="1">
+                <path
+                    android:fillColor="#FFFFFFFF"
+                    android:pathData="M43,49H53C55.76,49 58,51.24 58,54C58,56.76 55.76,59 53,59H43C40.24,59 38,56.76 38,54C38,51.24 40.24,49 43,49Z" />
+            </group>
+            <group
+                android:name="lower_dot"
+                android:pivotX="67"
+                android:pivotY="54"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:translateX="0">
+                <path
+                    android:fillColor="#FFFFFFFF"
+                    android:pathData="M72,54A5,5 0,1 1,62 54A5,5 0,1 1,72 54Z" />
+            </group>
+        </group>
+    </group>
+</vector>
