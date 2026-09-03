@@ -6,16 +6,6 @@
 
 Island 是一个用于创建和测试小米 HyperOS「超级岛」通知的 Android 项目，同时提供可以被其他应用直接集成的 SDK。
 
-### 项目内容
-
-```text
-app/                  示例应用与可视化编辑界面
-island-super-island/  可复用的 Super Island SDK
-design/               App 图标设计源文件
-```
-
-示例应用包含分页式编辑界面、关于页面、平台入口、主题色配置以及 Super Island 发布与实时更新功能。App 图标继续使用 manifest 中原有的 `@mipmap/ic_launcher` 引用。
-
 ### 环境要求
 
 - Android Studio（建议使用最新版稳定版）
@@ -113,14 +103,6 @@ fun IslandStatus() {
 
 使用 `updateActive(...)` 进行实时更新，使用 `cancel(notificationId)` 取消当前通知，使用 `activeIslands` 观察当前状态。SDK 会自动检测 XMSF 是否可用，并在每次验证结束后恢复 XMSF 状态。使用者不需要编写或维护 XMSF 内部逻辑。
 
-#### 本地 Maven 测试
-
-```bash
-./gradlew :island-super-island:publishReleasePublicationToLocalBuildRepository
-```
-
-生成的本地仓库位于 `island-super-island/build/repo`，AAR 位于 `island-super-island/build/outputs/aar/island-super-island-release.aar`。
-
 ### 许可证
 
 本项目采用 Apache License 2.0，详见 [LICENSE](LICENSE)。
@@ -128,14 +110,6 @@ fun IslandStatus() {
 ## English
 
 Island is an Android project for creating and testing Xiaomi HyperOS Super Island notifications. It also includes a reusable SDK that can be integrated into other Android applications.
-
-### Project layout
-
-```text
-app/                  Sample application and visual editor
-island-super-island/  Reusable Super Island SDK
-design/               App icon design sources
-```
 
 The sample app includes a paged editor, an About page, platform links, theme configuration, and Super Island publishing and live-update features. The app icon continues to use the existing manifest reference, `@mipmap/ic_launcher`.
 
@@ -229,14 +203,6 @@ fun IslandStatus() {
 ```
 
 Use `updateActive(...)` for live changes, `cancel(notificationId)` to remove the current notification, and `activeIslands` to observe the current state. The SDK detects XMSF availability automatically, restores the XMSF state after each validation transaction, and selects the regular-notification fallback when necessary. Consumers do not need to implement XMSF internals.
-
-#### Local Maven testing
-
-```bash
-./gradlew :island-super-island:publishReleasePublicationToLocalBuildRepository
-```
-
-The local repository is generated at `island-super-island/build/repo`; the AAR is generated at `island-super-island/build/outputs/aar/island-super-island-release.aar`.
 
 ### License
 
